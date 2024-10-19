@@ -35,28 +35,7 @@
 <body>
   <div class="container">
     <h1>Заявка на чат-бота</h1>
-    <iframe id="yandex-form-iframe" src="" frameborder="0" name="ya-form-671153b0c417f35b50217d86"></iframe>
+    <iframe src="https://forms.yandex.ru/u/671153b0c417f35b50217d86/?iframe=1" frameborder="0" name="ya-form-671153b0c417f35b50217d86"></iframe>
   </div>
-
-  <script>
-    // Функция для получения данных пользователя из Telegram
-    function getTelegramUserData() {
-      const urlParams = new URLSearchParams(window.location.search);
-      const telegramId = urlParams.get('telegram_id');
-      const telegramUsername = urlParams.get('username');
-      const telegramName = urlParams.get('name');
-
-      return {
-        telegram_id: telegramId,
-        username: telegramUsername,
-        name: telegramName
-      };
-    }
-
-    // Получаем данные пользователя и обновляем URL фрейма
-    const userData = getTelegramUserData();
-    const formUrl = `https://forms.yandex.ru/u/671153b0c417f35b50217d86?answer_short_text_59718965=${userData.telegram_id}&answer_short_text_59728945=${userData.name}&answer_short_text_59728871=${userData.username}`;
-    document.getElementById('yandex-form-iframe').src = formUrl;
-  </script>
 </body>
 </html>
